@@ -118,10 +118,29 @@ Enter Number:
 <h3 *ngFor="let result of table, let i=index">
   {{number}} * {{i+1}} = {{result}};
 </h3> 
+<!-- <app-reactive-form-module></app-reactive-form-module> -->
 
+  <div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmitForm()">
+      <div>
+        <label>Name : <input formControlName="name" type="text"> </label>
+      </div>
 
-  <app-reactive-form-module></app-reactive-form-module>  
+      <div>
+        <label>Email : <input formControlName="email" type="text"> </label>
+      </div>
 
+      <div>
+        <label>Message : <input formControlName="message" type="text"> </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" (click)="updateData()">Edit</button>
+    </form>
+
+  </div>
+  
+  <app-reactive-form-module></app-reactive-form-module> 
 
 
 

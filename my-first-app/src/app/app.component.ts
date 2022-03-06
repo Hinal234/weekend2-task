@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { DateTimeService } from './date-time.service';
 import { HttpclientService } from './httpclient.service';
 
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -15,19 +19,34 @@ export class AppComponent {
   getinfo:any;
   jsondata:any;
   count=0;
-  
+  myForm:any;
 
-  constructor(public date:DateTimeService, private ht:HttpclientService){
+  constructor(public date:DateTimeService, private ht:HttpclientService, private fb:FormBuilder){
     this.getdate = this.date.today;
     this.getinfo = [10,20,30];
     this.jsondata = this.date.jsondata1;
     this.count = this.date.increament();
   }
 
-  
+  ngOnInit(){
+    this.ht.getPost().subscribe((data)=>console.log);
+    this.myForm = this.fb.group({
+      name:["",Validators.required],
+      email:["",Validators.required,Validators.email],
+      message:["",Validators.required,Validators.minLength(10)],
+    })
 
 
+  }
 
+  onSubmitForm(){
+    console.log(this.myForm.value);
+    this.ht.sendPost(this.myForm.value).subscribe((data=>console.log(data)));
+  }
+
+  updateData(){
+    console.log(this.myForm.value);
+  }
       user={
          "email":'',
          "password":'',
