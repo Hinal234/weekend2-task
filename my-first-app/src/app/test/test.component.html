@@ -1,0 +1,44 @@
+<!-- <p>{{name}}</p>
+<p>{{name.length}}</p>
+<p>{{getUser()}}</p>
+<h4>Binding</h4>
+Name: <input [id]="myId" type="text" value="John">
+<h3 class="text-success">Success</h3>
+<h3 [class]="classname">Success</h3>
+
+
+
+<h3 [style.color]="'red'">Style Binding </h3>
+<h3 [style.color]="!hasError ? 'red' : 'green'">Style Binding </h3>
+
+<button type="button" (click)="counter()"> Submit</button>
+<h2>{{count}}</h2>
+
+<input #input type="text" >
+<button (click)="getData(input.value)">Click Me</button> -->
+
+<!-- {{this.dt.counter}} -->
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Passowrd</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>{{dt.userdata.firstname}}</td>
+        <td>{{dt.userdata.lastname}}</td>
+        <td>{{dt.userdata.email}}</td>
+        <td>{{dt.userdata.password}}</td>
+      </tr>
+    
+    </tbody>
+  </table>
+

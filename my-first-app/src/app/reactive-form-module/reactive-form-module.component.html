@@ -1,0 +1,77 @@
+<!-- 
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div>
+            <label>Name:
+                   <input formControlName="name" placeholder="enter you name:">
+            </label>
+        </div>
+        <div>
+            <label>Email:
+                   <input formControlName="email" placeholder="enter you email:">
+            </label>
+        </div>
+        <div>
+            <label>Message:
+                   <input formControlName="message" placeholder="enter Messsage:">
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div> -->
+
+
+<div class="container">
+    <h1>Registration Form</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div class>
+            <label>FirstName:
+                   <input formControlName="fname" placeholder="enter you firstname:">
+            </label>
+        </div>
+        <div>
+            <label>LastName:
+                   <input formControlName="lname" placeholder="enter you lastname:">
+            </label>
+        </div>
+        <div>
+            <label>Email:
+                   <input formControlName="email" placeholder="enter email:">
+            </label>
+        </div>
+        <div>
+            <label>Location:
+                   <input formControlName="location" placeholder="enter Location:">
+            </label>
+        </div>
+        <div>
+            <label>City:
+                   <input formControlName="city" placeholder="enter city:">
+            </label>
+        </div>
+        <div>
+            <label>Age:
+                   <input formControlName="age" placeholder="enter age:" type="number">
+            </label>
+        </div>
+        <div>
+            <label>Contact NO.:
+                   <input formControlName="contact" placeholder="enter Contact Number:">
+            </label>
+        </div>
+        <div>
+            <label>Start Date:
+                   <input type="date" formControlName="startdate" placeholder="enter From Date:">
+            </label>
+        </div>
+        <div>
+            <label>End Date:
+                   <input type="date" formControlName="enddate" placeholder="enter From Date:">
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
