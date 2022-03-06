@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DateTimeService } from './date-time.service';
+import { HttpclientService } from './httpclient.service';
 
 
 @Component({
@@ -16,12 +17,17 @@ export class AppComponent {
   count=0;
   
 
-  constructor(public date:DateTimeService){
+  constructor(public date:DateTimeService, private ht:HttpclientService){
     this.getdate = this.date.today;
     this.getinfo = [10,20,30];
     this.jsondata = this.date.jsondata1;
     this.count = this.date.increament();
-}
+  }
+
+  
+
+
+
       user={
          "email":'',
          "password":'',
@@ -71,5 +77,8 @@ export class AppComponent {
        }
 
      }
+
+
+    
 
 }
