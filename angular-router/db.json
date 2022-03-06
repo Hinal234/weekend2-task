@@ -1,0 +1,22 @@
+{
+  "food": [
+    {
+      "restaurant": 1,
+      "name": "food1",
+      "price": "400",
+      "image":"https://drive.google.com/uc?export=view&id=1QOLFC1TezJMgvyj5NI3_Ay_pWcfke7pi"
+    },
+    {
+      "restaurant": 2,
+      "name": "food2",
+      "price": "500",
+      "image":"https://drive.google.com/uc?export=view&id=1l6ybaOnaCRFsWZ34uXX8btHiCF3Qdacq"
+    },
+    {
+      "restaurant": 3,
+      "name": "food3",
+      "price": "600",
+      "image":"https://drive.google.com/uc?export=view&id=1eLjoV6qWUiQRzJtGsON9U3lRgzi7I1y3"
+    }
+  ]
+}
